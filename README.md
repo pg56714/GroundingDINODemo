@@ -18,25 +18,16 @@ conda activate groundingdinodemo
 
 pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu121
 
-git clone https://github.com/IDEA-Research/GroundingDINO.git
-
-cd GroundingDINO/
-
 pip install -e .
 
 create weights folder
 cd weights
 download https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
 put the downloaded file in the weights folder
-cd ..
-
-cd ..
-
-pip install gradio
 ```
 
 ### Running the Project
 
 ```
-python app.py
+python gradio_app.py
 ```
