@@ -1,5 +1,6 @@
-venv/
-.idea/
 /groundingdino.egg-info
 /build
 /weights
+__pycache__/
+*.py[cod]
+*$py.class
