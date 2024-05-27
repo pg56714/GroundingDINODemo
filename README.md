@@ -10,9 +10,7 @@ setting CUDA_HOME
 https://zhuanlan.zhihu.com/p/565649540s
 
 ```
-conda info --envs
-
-conda create --name groundingdinodemo python=3.10
+conda create -n groundingdinodemo python=3.10 -y
 
 conda activate groundingdinodemo
 
