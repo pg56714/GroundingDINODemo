@@ -17,12 +17,14 @@ conda activate groundingdinodemo
 pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu121
 
 pip install -e .
-
-create weights folder
-cd weights
-download https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
-put the downloaded file in the weights folder
 ```
+create weights folder
+
+cd weights
+
+download https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
+
+put the downloaded file in the weights folder
 
 ### Running the Project
 
