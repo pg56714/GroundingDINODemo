@@ -65,39 +65,42 @@ def run_grounding(input_image, grounding_caption, box_threshold, text_threshold)
     return image_with_box
 
 
+box_threshold = gr.Slider(
+    label="Box Threshold",
+    minimum=0.0,
+    maximum=1.0,
+    value=0.25,
+    step=0.001,
+)
+text_threshold = gr.Slider(
+    label="Text Threshold",
+    minimum=0.0,
+    maximum=1.0,
+    value=0.25,
+    step=0.001,
+)
+
 # View
 with gr.Blocks() as demo:
     gr.Markdown(MARKDOWN)
     with gr.Row():
-        with gr.Column():
-            input_image_component = gr.Image(type="numpy", label="Input Image")
-
-            with gr.Accordion("GroundingDINO", open=False):
-                box_threshold = gr.Slider(
-                    label="Box Threshold",
-                    minimum=0.0,
-                    maximum=1.0,
-                    value=0.35,
-                    step=0.001,
-                )
-                text_threshold = gr.Slider(
-                    label="Text Threshold",
-                    minimum=0.0,
-                    maximum=1.0,
-                    value=0.25,
-                    step=0.001,
-                )
-
-            image_categories_text_component = gr.Textbox(
-                label="Categories",
-                placeholder="comma separated list of categories",
-                scale=7,
-            )
-
+        input_image_component = gr.Image(type="numpy", label="Input Image")
         grounding_dion_output_image_component = gr.Image(
             type="pil", label="GroundingDINO Output"
         )
-    submit_button_component = gr.Button(value="Submit", scale=1, variant="primary")
+
+    with gr.Row():
+        image_categories_text_component = gr.Textbox(
+            label="Categories",
+            placeholder="comma separated list of categories",
+            scale=7,
+        )
+        submit_button_component = gr.Button(value="Submit", scale=1, variant="primary")
+
+    with gr.Column():
+        with gr.Accordion("GroundingDINO", open=False):
+            box_threshold.render()
+            text_threshold.render()
 
     submit_button_component.click(
         fn=run_grounding,
