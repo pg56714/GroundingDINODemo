@@ -4,9 +4,10 @@ import numpy as np
 from PIL import Image
 import warnings
 
-warnings.filterwarnings("ignore")
 from groundingdino.util.inference import annotate, predict, load_model
 import groundingdino.datasets.transforms as T
+
+warnings.filterwarnings("ignore")
 
 MARKDOWN = """
 # GroundingDINODemo
