@@ -32,7 +32,3 @@ put the downloaded file in the weights folder
 ```
 python gradio_app.py
 ```
-
-## Security
-
-Dependency upgrades and the known remaining issues are recorded in [docs/security-log.md](docs/security-log.md) ([繁體中文](docs/security-log.zh-TW.md)).
