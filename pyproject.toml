@@ -1,13 +1,14 @@
 [project]
 dependencies = [
     "addict>=2.4.0",
-    "gradio>=5.23.1",
+    "gradio>=6.16.0",
+    "opencv-python>=5.0.0.93",
     "pycocotools>=2.0.8",
     "supervision>=0.25.1",
     "timm>=1.0.15",
-    "torch>=2.5.1",
-    "torchvision>=0.20.1",
-    "transformers>=4.50.1",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "transformers>=5.5.0",
     "yapf>=0.43.0",
 ]
 description = "Add your description here"
@@ -16,10 +17,10 @@ readme = "README.md"
 requires-python = ">=3.11"
 version = "0.1.0"
 [tool.uv.sources]
-torch = {index = "pytorch-cu121"}
-torchvision = {index = "pytorch-cu121"}
+torch = {index = "pytorch-cu126"}
+torchvision = {index = "pytorch-cu126"}
 
 [[tool.uv.index]]
 explicit = true
-name = "pytorch-cu121"
-url = "https://download.pytorch.org/whl/cu121"
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
